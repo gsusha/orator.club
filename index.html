@@ -3,7 +3,7 @@
 	<head>
 		<title>orator.club</title>
 
-		<meta name="viewport" content="width=1440" />
+		<!-- <meta name="viewport" content="width=1440" /> -->
 		<link rel="stylesheet" href="css/style.css" />
 		<meta charset="UTF-8">
 	</head>
@@ -79,7 +79,7 @@
 					</div>
 					<div class="coming-desktop__row">
 						<div class="coming-desktop__title">
-							СИЛА В СЛОВЕ
+							<p>СИЛА В СЛОВЕ</p>
 						</div>
 					</div>
 					<div class="coming-desktop__row">
@@ -222,12 +222,12 @@
 								We work with you to empower your people to be happier, healthier and more productive in life and at work.
 							</div>
 						</div>
-						<div class="grid__item">Item</div>
-						<div class="grid__item">Item</div>
-						<div class="grid__item">Item</div>
-						<div class="grid__item">Item</div>
-						<div class="grid__item">Item</div>
-						<div class="grid__item">Item</div>
+						<div class="grid__item"><p>Item</p></div>
+						<div class="grid__item"><p>Item</p></div>
+						<div class="grid__item"><p>Item</p></div>
+						<div class="grid__item"><p>Item</p></div>
+						<div class="grid__item"><p>Item</p></div>
+						<div class="grid__item"><p>Item</p></div>
 					</div>
 				</div>
 			</div>
@@ -693,13 +693,13 @@
 						</div>
 
 						<div class="second-grid__item">
-							
+							<button class="second-grid__btn">ALL EVENTS</button>
 						</div>	
 					</div>
 
 				</div>
 
-				<button class="second-grid__btn">ALL EVENTS</button>
+				
 			</div>
 
 			<div class="speakers">
@@ -775,6 +775,12 @@
 				<div class="container">
 					<div class="space__wrapper">
 						<div class="space__slider">
+							<div class="space__item">
+								<img src="" alt="">
+							</div>
+							<div class="space__item">
+								<img src="" alt="">
+							</div>
 							<div class="space__item">
 								<img src="" alt="">
 							</div>
@@ -912,6 +918,16 @@
 			slidesPerView: 2
 			});
 			family.mousewheel.enable();
+
+			const space= new Swiper('.space__wrapper', {
+			wrapperClass: 'space__slider',
+			slideClass: 'space__item',
+			// Optional parameters
+			direction: 'horizontal',
+			slidesPerView: 1,
+			});
+			space.mousewheel.enable();
+
 		</script>
 
 	</body>
