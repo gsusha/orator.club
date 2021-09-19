@@ -710,7 +710,7 @@ html, body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 1px;
   background: #fff;
-  margin: 0px -90px;
+  margin: 0px -50px;
 }
 .grid .grid__wrapper .grid__big {
   background: #000;
@@ -1199,7 +1199,7 @@ html, body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 1px;
   background: #fff;
-  margin: 0px -90px;
+  margin: 0 -50px;
 }
 .second-grid .second-grid__wrapper .second-grid__big {
   background: #000;
@@ -1311,7 +1311,7 @@ html, body {
   color: #000;
   position: absolute;
   bottom: 100px;
-  right: 60px;
+  right: 40px;
 }
 
 /* ---------- SPEAKERS ---------- */
