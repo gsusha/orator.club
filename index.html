@@ -10,54 +10,90 @@
 	
 	<body>	
 
-		<div class="plug-desktop">
-				<div class="plug-desktop__bg">
-					<div class="plug-desktop__img"><img src="img/bg1.webp" alt=""></div>
-					<div class="plug-desktop__img"><img src="img/bg2.webp" alt=""></div>
-					<div class="plug-desktop__img"><img src="img/bg3.webp" alt=""></div>
-					<div class="plug-desktop__img"><img src="img/bg4.webp" alt=""></div>
+		<div id="desktop" class="coming-desktop">
+				<div class="coming-desktop__bg">
+					<div class="coming-desktop__img"><img src="img/bg1.webp" alt=""></div>
+					<div class="coming-desktop__img"><img src="img/bg2.webp" alt=""></div>
+					<div class="coming-desktop__img"><img src="img/bg3.webp" alt=""></div>
+					<div class="coming-desktop__img"><img src="img/bg4.webp" alt=""></div>
 				</div>
-				<div class="plug-desktop__wrapper">
-					<div class="plug-desktop__row">
-						<div class="plug-desktop__item">
+				<div class="coming-desktop__wrapper">
+					<div class="coming-desktop__row">
+						<div class="coming-desktop__item">
 							© КЛУБ ОРАТОРОВ 
 						</div>
-						<div class="plug-desktop__item">
+						<div class="coming-desktop__item">
 							2021
 						</div>
 					</div>
-					<div class="plug-desktop__row">
-						<div class="plug-desktop__title">
+					<div class="coming-desktop__row">
+						<div class="coming-desktop__title">
 							СИЛА В СЛОВЕ
 						</div>
 					</div>
-					<div class="plug-desktop__row">
-						<div class="plug-desktop__form">
-							<div class="plug-desktop__form-title">
+					<div class="coming-desktop__row">
+						<div class="coming-desktop__form">
+							<div class="coming-desktop__form-title">
 								Две строчки о том, что мы перезапускаем вебсайт
 								и + 10 лет упоминание
 							</div>
-							<div class="plug-desktop__form-auth">
-								<input type="text" class="plug-desktop__form-input" placeholder="YOUR EMAIL ADDRESS">
-								<a href="#" class="plug-desktop__form-sign">
+							<div class="coming-desktop__form-auth">
+								<input type="text" class="coming-desktop__form-input" placeholder="YOUR EMAIL ADDRESS">
+								<a href="#" class="coming-desktop__form-sign">
 									SIGN ME UP
 								</a>
 							</div>
 						</div>
-						<div class="plug-desktop__column">
-							<div class="plug-desktop__text">
+						<div class="coming-desktop__column">
+							<div class="coming-desktop__text">
 								<p>Придумано в Москве</p>
 								<p>Нарисовано в Нью-Йорке</p>
 								<p>Существует с 2011 года</p>
 							</div>
-							<button class="plug-desktop__btn">
+							<button class="coming-desktop__btn">
 								CURRENT WEBSITE
 							</button>
 						</div>
 					</div>
 				</div>
 			</div>
-			
+		
+		<div id="mobile" class="coming-mobile">
+				<div class="coming-mobile__container">
+					<div class="coming-mobile__bg">
+						<div class="coming-mobile__img"><img src="img/bg1.webp" alt=""></div>
+						<div class="coming-mobile__img"><img src="img/bg2.webp" alt=""></div>
+						<div class="coming-mobile__img"><img src="img/bg3.webp" alt=""></div>
+						<div class="coming-mobile__img"><img src="img/bg4.webp" alt=""></div>
+					</div>
+					<div class="coming-mobile__wrapper">
+						<div class="coming-mobile__body">
+							<div class="coming-mobile__logo">
+								<img src="img/logo-white.svg" alt="">
+							</div>
+							<div class="coming-mobile__title">
+								СИЛА В СЛОВЕ
+							</div>
+							<div class="coming-mobile__subtitle">
+									Три строчки о том, что мы перезапускаем вебсайт и + 10 лет упоминание
+							</div>
+							<div class="coming-mobile__form">
+								<div class="coming-mobile__auth">
+								<input type="text" class="coming-mobile__input" placeholder="YOUR EMAIL ADDRESS">
+								<div class="coming-mobile__arrow">
+									<img src="" alt="">
+								</div>
+								</div>
+							</div>
+							<button class="coming-mobile__btn">
+								Текущий веб-сайт
+							</button>
+							
+						</div>
+					</div>
+				</div>
+		</div>
+
 		<div class="wrapper">
 			
 			<div class="important">
@@ -813,5 +849,19 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="js/script.js"></script>
+
+		<!— Scripts —>
+		<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+		<script type="text/javascript">
+			const family = new Swiper('.family__wrapper', {
+			wrapperClass: 'family__row',
+			slideClass: 'family__item',
+			// Optional parameters
+			direction: 'horizontal',
+			slidesPerView: 2
+			});
+			family.mousewheel.enable();
+		</script>
+
 	</body>
 </html>
