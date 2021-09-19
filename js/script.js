@@ -1,6 +1,6 @@
 $(document).ready(function() {
-	$('.coming-desktop__btn').click(function(event) {
+	$('.coming-desktop__btn, .coming-mobile__btn').click(function(event) {
 		$('.wrapper').addClass('active');
-		$('.coming-desktop').addClass('hidden');
+		$('.coming-desktop, .coming-mobile').addClass('hidden');
 	});
 });
