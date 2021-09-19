@@ -169,7 +169,133 @@ html, body {
   text-transform: uppercase;
 }
 
-/* ---------- coming ---------- */
+/* ---------- coming Вариант 1 ---------- */
+/*.coming-desktop {
+	width: 100%;
+	position: relative;
+
+	.coming-desktop__bg {
+		width: 100%;
+
+		display: flex;
+		flex-direction: row;
+
+		.coming-desktop__img {
+			width: 25%;
+		}
+		.coming-desktop__img img {
+			width: 100%;
+		}
+	}
+
+	.coming-desktop__wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+
+		color: #fff;
+
+		padding: 50px 50px;
+
+		.coming-desktop__row {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+
+			.coming-desktop__item {
+				font-size: 25px;
+				font-weight: 600;
+				letter-spacing: 2.5px;
+			}
+
+			.coming-desktop__title {
+				color: #fabc44;
+				font-size: 230px;
+				font-weight: 300;
+				letter-spacing: -21.56px;
+				font-style: italic;
+
+			}
+
+			.coming-desktop__form {
+				width: 660px;
+				height: 200px;
+
+				background: #121212;
+				border-radius: 29px;
+
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+
+				padding: 30px 40px;
+
+				.coming-desktop__form-title {
+					font-size: 25px;
+					font-weight: 600;
+					line-height: 1.28;
+					color: #fff;
+				}
+
+				.coming-desktop__form-auth {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					border-bottom: solid 1px #646464;
+					padding: 0px 0px 20px 0px; 
+
+					.coming-desktop__form-input {
+						background: #121212;
+						font-size: 25px;
+						letter-spacing: -1px;
+						color: #fff;
+					}
+					.coming-desktop__form-sign {
+						color: #fff;
+						font-size: 25px;
+						letter-spacing: -1px;
+					}
+				}
+			}
+
+			.coming-desktop__column {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+
+				.coming-desktop__text {
+					text-align: right;
+					font-size: 25px;
+					font-weight: 600;
+					line-height: 1.28;
+				}
+				.coming-desktop__btn {
+					width: 354px;
+					height: 52px;
+					border-radius: 14px;
+					background: #fabc44;
+
+					color: #000;
+					font-size: 25px;
+					letter-spacing: -1px;
+				}
+			}
+
+		}
+	}
+}
+
+.coming-desktop.hidden {
+	display: none;
+} */
+/* ---------- coming Вариант 2 ---------- */
 .coming-desktop {
   width: 100%;
   position: relative;
@@ -225,6 +351,18 @@ html, body {
   font-size: 25px;
   font-weight: 600;
   letter-spacing: 2.5px;
+}
+.coming-desktop .coming-desktop__wrapper .coming-desktop__row .coming-desktop__item span {
+  margin: 0px 0px 0px 60px;
+}
+.coming-desktop .coming-desktop__wrapper .coming-desktop__row .coming-desktop__btn {
+  width: 354px;
+  height: 52px;
+  border-radius: 14px;
+  background: #fabc44;
+  color: #000;
+  font-size: 25px;
+  letter-spacing: -1px;
 }
 .coming-desktop .coming-desktop__wrapper .coming-desktop__row .coming-desktop__title {
   color: #fabc44;
@@ -298,14 +436,11 @@ html, body {
   font-weight: 600;
   line-height: 1.28;
 }
-.coming-desktop .coming-desktop__wrapper .coming-desktop__row .coming-desktop__column .coming-desktop__btn {
-  width: 354px;
-  height: 52px;
-  border-radius: 14px;
-  background: #fabc44;
-  color: #000;
-  font-size: 25px;
-  letter-spacing: -1px;
+.coming-desktop .coming-desktop__wrapper .coming-desktop__row .coming-desktop__column .coming-desktop__logo {
+  width: 388px;
+}
+.coming-desktop .coming-desktop__wrapper .coming-desktop__row .coming-desktop__column .coming-desktop__logo img {
+  width: 100%;
 }
 
 .coming-desktop.hidden {
