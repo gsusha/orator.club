@@ -95,6 +95,8 @@ body {
 			justify-content: space-between;
 			width: 100%;
 
+			position: relative;
+
 			.coming-desktop__item {
 				font-size: 25px;
 				font-weight: 600;
@@ -103,10 +105,17 @@ body {
 
 			.coming-desktop__title {
 				color: #fabc44;
-				font-size: 230px;
+				font-size: 220px;
 				font-weight: 300;
 				letter-spacing: -21.56px;
+				text-align: center;
 				font-style: italic;
+
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				width: 100%;
 
 			}
 
@@ -485,9 +494,12 @@ body {
 			}
 
 			.header__logo {
+				width: 380px;
 				margin: 0px 34px;
 			}
-			.header__logo img {}
+			.header__logo img {
+				width: 100%;
+			}
 		}
 	}
 }
@@ -576,7 +588,7 @@ body {
 		font-size: 50px;
 		text-transform: uppercase;
 		letter-spacing: -3px;
-
+		text-align: center;
 		margin: 0px -700px;
 		padding: 36px 0px;
 	}

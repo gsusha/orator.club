@@ -1,4 +1,4 @@
-if($(window).width() < 481){
+if(window.innerWidth <= 768){
 	x=1;
 	if(x==1){
 		document.getElementById("mobile").style.display = "block";
