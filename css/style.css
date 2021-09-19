@@ -120,6 +120,10 @@ html, body {
 }
 
 .wrapper {
+  display: none;
+}
+
+.wrapper.active {
   min-width: 100%;
   min-height: 100%;
   overflow: hidden;
@@ -163,6 +167,150 @@ html, body {
   font-weight: 600;
   font-size: 22px;
   text-transform: uppercase;
+}
+
+/* ---------- Plug ---------- */
+.plug-desktop {
+  width: 100%;
+  position: relative;
+}
+.plug-desktop .plug-desktop__bg {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.plug-desktop .plug-desktop__bg .plug-desktop__img {
+  width: 25%;
+}
+.plug-desktop .plug-desktop__bg .plug-desktop__img img {
+  width: 100%;
+}
+.plug-desktop .plug-desktop__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+  padding: 50px 50px;
+}
+.plug-desktop .plug-desktop__wrapper .plug-desktop__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+.plug-desktop .plug-desktop__wrapper .plug-desktop__row .plug-desktop__item {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+}
+.plug-desktop .plug-desktop__wrapper .plug-desktop__row .plug-desktop__title {
+  color: #fabc44;
+  font-size: 230px;
+  font-weight: 300;
+  letter-spacing: -21.56px;
+  font-style: italic;
+  margin: 0px -50px;
+}
+.plug-desktop .plug-desktop__wrapper .plug-desktop__row .plug-desktop__form {
+  width: 660px;
+  height: 200px;
+  background: #121212;
+  border-radius: 29px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 40px;
+}
+.plug-desktop .plug-desktop__wrapper .plug-desktop__row .plug-desktop__form .plug-desktop__form-title {
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.28;
+  color: #fff;
+}
+.plug-desktop .plug-desktop__wrapper .plug-desktop__row .plug-desktop__form .plug-desktop__form-auth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: solid 1px #646464;
+  padding: 0px 0px 20px 0px;
+}
+.plug-desktop .plug-desktop__wrapper .plug-desktop__row .plug-desktop__form .plug-desktop__form-auth .plug-desktop__form-input {
+  background: #121212;
+  font-size: 25px;
+  letter-spacing: -1px;
+  color: #fff;
+}
+.plug-desktop .plug-desktop__wrapper .plug-desktop__row .plug-desktop__form .plug-desktop__form-auth .plug-desktop__form-sign {
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: -1px;
+}
+.plug-desktop .plug-desktop__wrapper .plug-desktop__row .plug-desktop__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.plug-desktop .plug-desktop__wrapper .plug-desktop__row .plug-desktop__column .plug-desktop__text {
+  text-align: right;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.28;
+}
+.plug-desktop .plug-desktop__wrapper .plug-desktop__row .plug-desktop__column .plug-desktop__btn {
+  width: 354px;
+  height: 52px;
+  border-radius: 14px;
+  background: #fabc44;
+  color: #000;
+  font-size: 25px;
+  letter-spacing: -1px;
+}
+
+.plug-desktop.hidden {
+  display: none;
 }
 
 /* ---------- Header ---------- */
