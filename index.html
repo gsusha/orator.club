@@ -775,14 +775,29 @@
 				<div class="container">
 					<div class="space__wrapper">
 						<div class="space__slider">
-							<div class="space__item">
-								<img src="" alt="">
+							<div class="space__items">
+								<div class="space__item">
+									<img src="img/slider/slide1.jfif" alt="" class="space__img" >
+								</div>
+								<div class="space__item">
+									<img src="img/slider/slide2.jpg" alt="" class="space__img" >
+								</div>
+								<div class="space__item">
+									<img src="img/slider/slide3.jpg" alt="" class="space__img">
+								</div>
 							</div>
-							<div class="space__item">
-								<img src="" alt="">
-							</div>
-							<div class="space__item">
-								<img src="" alt="">
+
+							<a class="space__prev" onclick="minusSlide()">
+								<img src="img/slider/arrow.svg" alt="">
+							</a>
+							<a class="space__next" onclick="plusSlide()">
+								<img src="img/slider/arrow.svg" alt="">
+							</a>
+
+							<div class="space__nav">
+								<div class="space__nav-item" onclick="currentSlide(1)"></div>
+								<div class="space__nav-item" onclick="currentSlide(2)"></div>
+								<div class="space__nav-item" onclick="currentSlide(3)"></div>
 							</div>
 						</div>
 	
@@ -906,6 +921,7 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="js/script.js"></script>
+		<script src="js/slider.js"></script>
 
 		<!— Scripts —>
 		<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
@@ -918,15 +934,6 @@
 			slidesPerView: 2
 			});
 			family.mousewheel.enable();
-
-			const space= new Swiper('.space__wrapper', {
-			wrapperClass: 'space__slider',
-			slideClass: 'space__item',
-			// Optional parameters
-			direction: 'horizontal',
-			slidesPerView: 1,
-			});
-			space.mousewheel.enable();
 
 		</script>
 
