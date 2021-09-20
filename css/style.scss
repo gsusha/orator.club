@@ -172,14 +172,24 @@ body {
 					line-height: 1.28;
 				}
 				.coming-desktop__btn {
+					display: inline-block;
 					width: 354px;
 					height: 52px;
 					border-radius: 14px;
 					background: #fabc44;
-
 					color: #000;
 					font-size: 25px;
 					letter-spacing: -1px;
+
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: center;
+				}
+
+				.coming-desktop__btn img {
+					width: 45px;
+					margin: 0px 0px 0px 20px;
 				}
 			}
 
@@ -245,6 +255,7 @@ body {
 			}
 
 			.coming-desktop__btn {
+				display: inline-block;
 				width: 354px;
 				height: 52px;
 				border-radius: 14px;
@@ -252,6 +263,16 @@ body {
 				color: #000;
 				font-size: 25px;
 				letter-spacing: -1px;
+
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.coming-desktop__btn img {
+				width: 45px;
+				margin: 0px 0px 0px 20px;
 			}
 
 			.coming-desktop__title {
@@ -559,17 +580,18 @@ body {
 
 			.cta__column {
 				.cta__img {
-					background: #121212;
 					width: 640px;
 					height: 470px;
-
-					border-radius: 8px;
-  					border: solid 1px #979797;
 
 					margin: 0px 0px 22px 0px;
 				}
 				.cta__img img {
+					border-radius: 8px;
+  					border: solid 1px #979797;
+
 					width: 100%;
+					height: 100%;
+					object-fit: cover;
 				}
 				.cta__number {
 					font-size: 25px;
@@ -698,6 +720,14 @@ body {
 				font-size: 20px;
   				font-weight: 600;
   				letter-spacing: 3px;
+
+  				display: flex;
+  				flex-direction: row;
+  				align-items: center;
+			}
+			.family__scroll img {
+				width: 80px;
+				margin: 0px 0px 0px 40px;
 			}
 		}
 
@@ -760,9 +790,6 @@ body {
 				text-transform: uppercase;
 			}
 			.announcement__img {
-				background: #fabc44;
-				border-radius: 42px;
-
 				width: 145px;
 				height: 145px;
 
@@ -770,6 +797,9 @@ body {
 			}
 			.announcement__img img {
 				width: 100%;
+				height: 100%;
+				border-radius: 42px;
+				object-fit: cover;
 			}
 		}
 		.announcement__text {
@@ -923,13 +953,15 @@ body {
 				.ambassadors__item-img {
 					width: 216px;
 					height: 256px;
-					background: #fabc44;
-					border-radius: 13px;
+					
 
 					margin: 0px 0px 20px 0px;
 				}
 				.ambassadors__item-img img {
 					width: 100%;
+					height: 100%;
+					border-radius: 13px;
+					object-fit: cover;
 				}
 				.ambassadors__item-name {
 					text-transform: uppercase;
@@ -1058,9 +1090,6 @@ body {
 				.educators__block {
 					width: 320px;
 					height: 420px;
-					border-radius: 70px;
-	  				border: solid 1px #979797;
-	  				background: #000;
 
 	  				position: relative;
 
@@ -1083,12 +1112,24 @@ body {
 						justify-content: center;
 
 					}
+					.educators__img {
+						width: 100%;
+						height: 100%;
+						border-radius: 70px;
+	  					border: solid 1px #979797;
+	  					background: #000;
+
+						z-index: -1;
+						object-fit: cover;
+					}
 				}
+
 				.educators__desc {
 					font-size: 25px;
 					line-height: 1.2;
 					color: #fabc44;
 					text-align: center;
+
 				}
 				.educators__desc p {
 					font-weight: 800;
@@ -1178,15 +1219,14 @@ body {
 				width: 340px;
 				height: 230px;
 
-				border-radius: 18px;
-				box-shadow: inset 0 0 0 6px #000, 0 0 0 1px #fff;
-
-				background: #c2813b;
-
 				margin: 0px 0px 20px 0px;
 			}
 			.second-grid__item-img img {
 				width: 100%;
+				height: 100%;
+				border-radius: 18px;
+				box-shadow: inset 0 0 0 6px #000, 0 0 0 1px #fff;
+				object-fit: cover;
 			}
 			.second-grid__item-row {
 				display: flex;
@@ -1301,7 +1341,7 @@ body {
 				width: 80px;
 				cursor: pointer;
 				position: absolute;
-				bottom: 60px;
+				bottom: 30px;
 				margin-top: -22px;
 				padding: 0px 40px;
 
@@ -1313,13 +1353,12 @@ body {
 			}
 
 			.space__prev {
-				transform: rotate(-90deg) translateX(-80px);
-				left: 28px;
+				transform: rotate(180deg);
+				left: 70px;
 			}
 
 			.space__next {
-				transform: rotate(90deg);
-				right: 28px;
+				right: 70px;
 			}
 
 			.space__nav {
@@ -1441,13 +1480,13 @@ body {
 			width: 480px;
 			height: 500px;
 
-			border-radius: 70px;
-			border: solid 1px #979797;
-
-			background: #f7b03c;
 		}
 		.form__img img {
 			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 70px;
+			border: solid 1px #979797;
 		}
 	}
 }
