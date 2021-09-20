@@ -5,4 +5,3 @@ $(document).ready(function() {
 		$('.coming-desktop, .coming-mobile').addClass('hidden');
 	});
 });
-
