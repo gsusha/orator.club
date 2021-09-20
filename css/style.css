@@ -1173,6 +1173,7 @@ html, body {
   font-style: italic;
   letter-spacing: -3.61px;
   text-align: center;
+  z-index: 5;
 }
 
 /* ---------- EDUCATORS ---------- */

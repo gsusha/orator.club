@@ -14,9 +14,11 @@ function onYouTubePlayerAPIReady() {
     playerVars: {
       autoplay: 1,        // Auto-play the video on load
       controls: 0,        // Show pause/play buttons in player
+      disablekb: 1,
       showinfo: 0,        // Hide the video title
-      modestbranding: 0,  // Hide the Youtube Logo
+      modestbranding: 1,  // Hide the Youtube Logo
       loop: 1,            // Run the video in a loop
+      rel: 0,
       fs: 0,              // Hide the full screen button
       cc_load_policy: 0, // Hide closed captions
       iv_load_policy: 0,  // Hide the Video Annotations
