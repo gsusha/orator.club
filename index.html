@@ -127,7 +127,7 @@
 								СИЛА В СЛОВЕ
 							</div>
 							<div class="coming-mobile__subtitle">
-									Три строчки о том, что мы перезапускаем вебсайт и + 10 лет упоминание
+								Три строчки о том, что мы перезапускаем вебсайт и + 10 лет упоминание
 							</div>
 							<div class="coming-mobile__form">
 								<div class="coming-mobile__auth">
@@ -178,8 +178,7 @@
 				<div class="container">
 					<div class="cta__wrapper">
 						<div class="cta__title">
-							<span class="cta__subtitle">We work with you to empower your people to be happier, healthier and more productive in life and at work.
-							</span>
+							<span class="cta__subtitle">We work with you to empower your people to be happier, healthier and more productive in life and at work.</span>
 							<p>SOMETHING HAPPENED HERE</p>
 							<button class="cta__btn">join the waitlist</button>
 						</div>
@@ -561,8 +560,10 @@
 
 			<div class="video">
 				<div class="video__wrapper">
-					<div id="video" class="video__video">	
-					</div>
+					<!--
+						Согласно YouTube API, для зацикливания видео указывается плейлист с ID видео и loop=1.
+					-->
+					<iframe id="video" class="video__video" src="https://www.youtube.com/embed/u3bEGDSb4Cs?playlist=u3bEGDSb4Cs&loop=1&controls=0&autoplay=1&mute=1"></iframe>
 					<div class="video__title">
 						(одна строчка на фоне видео)
 					</div>
@@ -955,23 +956,24 @@
 
 		</div>
 
+		<!-- Scripts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="js/script.js"></script>
 		<script src="js/slider.js"></script>
-		
-		<script src="js/video.js"></script>
-		<!— Scripts —>
+
 		<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 		<script type="text/javascript">
 			const family = new Swiper('.family__wrapper', {
-			wrapperClass: 'family__row',
-			slideClass: 'family__item',
-			// Optional parameters
-			direction: 'horizontal',
-			slidesPerView: 2
+				navigation: {
+					nextEl: '.family__scroll img',	// Немного костыль, но легальный
+				},
+				wrapperClass: 'family__row',
+				slideClass: 'family__item',
+				// Optional parameters
+				direction: 'horizontal',
+				slidesPerView: 2
 			});
-			family.mousewheel.enable();
-
+			//family.mousewheel.enable();
 		</script>
 
 	</body>

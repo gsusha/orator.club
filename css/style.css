@@ -1157,6 +1157,8 @@ html, body {
           justify-content: center;
 }
 .video .video__wrapper .video__video {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
   position: absolute;
   top: 0;
   left: 0;
