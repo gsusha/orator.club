@@ -888,9 +888,9 @@
 							</a>
 
 							<div class="space__nav">
-								<div class="space__nav-item" onclick="currentSlide(1)"></div>
-								<div class="space__nav-item" onclick="currentSlide(2)"></div>
-								<div class="space__nav-item" onclick="currentSlide(3)"></div>
+								<div class="space__nav-item"></div>
+								<div class="space__nav-item"></div>
+								<div class="space__nav-item"></div>
 							</div>
 						</div>
 	
@@ -1034,6 +1034,17 @@
 				navigation: {
 					nextEl: '.space__next',
     				prevEl: '.space__prev'
+				},
+				pagination: {
+					el: '.space__nav',
+					type: 'bullets',
+					bulletClass: 'space__nav-item',
+					bulletActiveClass: 'active',
+					clickable: true
+				},
+				autoplay: {
+					delay: 5000,
+					pauseOnMouseEnter: true
 				},
 				wrapperClass: 'space__items',
 				slideClass: 'space__item',
