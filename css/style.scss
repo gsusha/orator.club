@@ -622,47 +622,33 @@ body {
 		font-size: 50px;
 		text-transform: uppercase;
 		letter-spacing: -3px;
-		text-align: center;
-
 		display: inline-block;
 		padding-left: 100%;
 		-webkit-animation: scroll 20s infinite linear;
-	    -moz-animation: scroll 20s infinite linear;
-	    animation: scroll 20s infinite linear;
+		animation: scroll 20s infinite linear;
 	}
-
-		/* text right to left */
-
-		@-webkit-keyframes scroll {
-	    0% {
-	        -webkit-transform: translate(0, 0);
-	        transform: translate(0, 0);
-	    }
-	    100% {
-	        -webkit-transform: translate(-100%, 0);
-	        transform: translate(-100%, 0)
-	    }
+	
+	@-webkit-keyframes scroll {
+		0% {
+		  -webkit-transform: translate(5%, 0);
+		  transform: translate(5%, 0);
+		}
+		100% {
+		  -webkit-transform: translate(-105%, 0);
+		  transform: translate(-105%, 0);
+		}
 	}
-	 
-	@-moz-keyframes scroll {
-	    0% {
-	        -moz-transform: translate(0, 0);
-	        transform: translate(0, 0);
-	    }
-	    100% {
-	        -moz-transform: translate(-100%, 0);
-	        transform: translate(-100%, 0)
-	    }
-	}
-	 
 	@keyframes scroll {
-	    0% {
-	        transform: translate(0, 0);
-	    }
-	    100% {
-	        transform: translate(-100%, 0)
-	    }
+		0% {
+			-webkit-transform: translate(5%, 0);
+			        transform: translate(5%, 0);
+		}
+		100% {
+		    -webkit-transform: translate(-105%, 0);
+		            transform: translate(-105%, 0);
+		}
 	}
+
 }
 
 
@@ -670,6 +656,7 @@ body {
 
 .grid {
 	width: 100%;
+	background: #000;
 	.grid__wrapper {
 		box-sizing: border-box;
 		display: grid;
@@ -713,17 +700,15 @@ body {
 
 			background: #000;
 			height: 260px;
-
-			font-size: 60px;
-			letter-spacing: -3px;
-  			color: #fff;
-
   			
 		}
-		.grid__item p {
+		.grid__item a {
+			font-size: 60px;
+			letter-spacing: -3px;
+			color: #fff;
 			position: relative;
 		}
-		.grid__item p::after {
+		.grid__item a::after {
 			content: '';
 
 			width: 100%;
@@ -768,6 +753,7 @@ body {
 			.family__scroll img {
 				width: 80px;
 				margin: 0px 0px 0px 40px;
+				cursor: pointer;
 			}
 		}
 
@@ -1189,6 +1175,7 @@ body {
 
 .second-grid {
 	width: 100%;
+	background: #000;
 
 	position: relative;
 
