@@ -1371,13 +1371,15 @@ body {
 			margin: 0px 0px 100px 0px;
 			width: 100%;
 			position: relative;
+			overflow: hidden;
 
 			.space__items {
 				display: flex;
 				align-items: flex-end;
+				position: relative;
 
 				.space__item {
-					padding: 40px 40px;
+					
 				}
 				
 			}

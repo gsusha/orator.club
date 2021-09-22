@@ -1490,6 +1490,7 @@ html, body {
   margin: 0px 0px 100px 0px;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 .space .space__wrapper .space__slider .space__items {
   display: -webkit-box;
@@ -1498,9 +1499,7 @@ html, body {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-}
-.space .space__wrapper .space__slider .space__items .space__item {
-  padding: 40px 40px;
+  position: relative;
 }
 .space .space__wrapper .space__slider .space__img {
   width: 1340px;
