@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 $(document).ready(function(){
 	$(window).on("scroll",function(){
-		let wn = $(window).scrollTop();
+		let wwn = $(window).scrollTop();
 
 		if(wn > 70){
 			$(".header__menu").addClass("fixed");

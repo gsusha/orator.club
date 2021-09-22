@@ -1,5 +1,4 @@
-@import "nullstyle.scss";
-@import "fonts.scss";
+@import "nullstyle.scss", "fonts.scss";
 
 html,body {
 	height: 100%;
@@ -207,6 +206,8 @@ body {
 /* ---------- coming Вариант 2 ---------- */
 
 .coming-desktop {
+	height: 100vh; 
+	overflow: hidden;
 	min-width: 1440px;
 	position: relative;
 
@@ -1689,3 +1690,9 @@ body {
 		}
 	}
 }
+
+
+
+
+//Подключение адаптива 
+@import "media.scss";

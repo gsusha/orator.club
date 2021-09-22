@@ -317,6 +317,8 @@ html, body {
 } */
 /* ---------- coming Вариант 2 ---------- */
 .coming-desktop {
+  height: 100vh;
+  overflow: hidden;
   min-width: 1440px;
   position: relative;
 }
