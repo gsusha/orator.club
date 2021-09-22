@@ -1372,9 +1372,9 @@ body {
 			width: 100%;
 			position: relative;
 
-			.space-items {
+			.space__items {
 				display: flex;
-				flex-direction: row;
+				align-items: flex-end;
 
 				.space__item {
 					padding: 40px 40px;

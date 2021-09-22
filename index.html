@@ -1029,6 +1029,18 @@
 				slidesPerView: 2
 			});
 			//family.mousewheel.enable();
+
+			const space = new Swiper('.space__slider', {
+				navigation: {
+					nextEl: '.space__next',
+    				prevEl: '.space__prev'
+				},
+				wrapperClass: 'space__items',
+				slideClass: 'space__item',
+				// Optional parameters
+				direction: 'horizontal',
+				slidesPerView: 1
+			});
 		</script>
 
 

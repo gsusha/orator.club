@@ -1491,16 +1491,15 @@ html, body {
   width: 100%;
   position: relative;
 }
-.space .space__wrapper .space__slider .space-items {
+.space .space__wrapper .space__slider .space__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
-.space .space__wrapper .space__slider .space-items .space__item {
+.space .space__wrapper .space__slider .space__items .space__item {
   padding: 40px 40px;
 }
 .space .space__wrapper .space__slider .space__img {
