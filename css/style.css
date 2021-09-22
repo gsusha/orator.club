@@ -626,6 +626,8 @@ html, body {
   width: 100%;
   background: #b6c1c1;
   padding: 10px 0;
+  -webkit-transition: 0.5s easy;
+  transition: 0.5s easy;
   z-index: 10;
 }
 .header .header__wrapper {
@@ -674,6 +676,13 @@ html, body {
 }
 .header .header__wrapper .header__menu .header__logo img {
   width: 100%;
+}
+.header .header__wrapper .header__menu.fixed {
+  position: fixed;
+  top: 3%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 /* ---------- CTA ---------- */
@@ -1021,6 +1030,12 @@ html, body {
   padding: 30px;
 }
 .announcement .announcement__wrapper .announcement__items .announcement__item .announcement__item-tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0px 0px 30px 0px;
 }
 .announcement .announcement__wrapper .announcement__items .announcement__item .announcement__item-tags .announcement__item-tag {
@@ -1030,8 +1045,19 @@ html, body {
   color: #f0e8dd;
   font-size: 20px;
   font-weight: 600;
+  text-transform: uppercase;
   padding: 6px 10px;
-  margin: 0px 10px 0px 0px;
+}
+.announcement .announcement__wrapper .announcement__items .announcement__item .announcement__item-tags .announcement__item-open {
+  border-radius: 17px;
+  border: 1px solid #000;
+  background: #f7b03c;
+  letter-spacing: 1.82px;
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 6px 10px;
 }
 .announcement .announcement__wrapper .announcement__items .announcement__item .announcement__item-title {
   font-weight: normal;
@@ -1077,6 +1103,9 @@ html, body {
 }
 .announcement .announcement__wrapper .announcement__items .announcement__item:nth-child(5) {
   background: #f0dedd;
+}
+.announcement .announcement__wrapper .announcement__items .announcement__item:hover {
+  background: #f7b03c;
 }
 
 /* ---------- AMBASSADORS ---------- */
