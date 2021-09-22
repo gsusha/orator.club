@@ -638,8 +638,8 @@ body {
 		  transform: translate(5%, 0);
 		}
 		100% {
-		  -webkit-transform: translate(-105%, 0);
-		  transform: translate(-105%, 0);
+		  -webkit-transform: translate(-110%, 0);
+		  transform: translate(-110%, 0);
 		}
 	}
 	@keyframes scroll {
@@ -648,8 +648,8 @@ body {
 			        transform: translate(5%, 0);
 		}
 		100% {
-		    -webkit-transform: translate(-105%, 0);
-		            transform: translate(-105%, 0);
+		    -webkit-transform: translate(-110%, 0);
+		            transform: translate(-110%, 0);
 		}
 	}
 
@@ -966,6 +966,9 @@ body {
 			grid-gap: 25px;
 
 			margin: 0px 0px 100px 0px;
+
+			-webkit-perspective: 2500;
+
 			.ambassadors__item {
 				width: 240px;
 				height: 350px;
@@ -979,51 +982,51 @@ body {
 
 				position: relative;
 
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-
 				padding: 10px;
 
-				transition: all 5s easy;
+				transition: 0.6s;
+				transform-style: preserve-3d;
 
-				.ambassadors__item-img {
-					width: 216px;
-					height: 256px;
-					
+				.ambassadors__item-front {
+					z-index: 2;
+					.ambassadors__item-img {
+						width: 216px;
+						height: 256px;
+						
+						margin: 12px auto 20px auto;
+					}
+					.ambassadors__item-img img {
+						width: 100%;
+						height: 100%;
+						border-radius: 13px;
+						object-fit: cover;
+					}
+					.ambassadors__item-name {
+						text-transform: uppercase;
+					}
+				}
 
-					margin: 0px 0px 20px 0px;
+				.ambassadors__item-back {
+					transform: rotateY(180deg);
+
+					.ambassadors__item-desc {
+						padding: 50px 20px;
+
+					}
 				}
-				.ambassadors__item-img img {
-					width: 100%;
-					height: 100%;
-					border-radius: 13px;
-					object-fit: cover;
+
+				.ambassadors__item-front, .ambassadors__item-back {
+					-webkit-backface-visibility: hidden;
+ 
+					position: absolute;
+					top: 0;
+					left: 0;
 				}
-				.ambassadors__item-name {
-					text-transform: uppercase;
-				}
-				.ambassadors__item-desc {
-					display: none;
-				}
+
+				
 			}
 			.ambassadors__item:hover {
-				.ambassadors__item-img {
-					display: none;
-				}
-				.ambassadors__item-name {
-					display: none;
-				}
-				.ambassadors__item-desc {
-					display: block;
-
-					line-height: 1.2;
-
-					position: absolute;
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%, -50%);
-				}
+				transform: rotateY(180deg);
 			}
 		}
 		.ambassadors__text {

@@ -7,6 +7,7 @@ $(document).ready(function() {
 });
 
 
+
 /* Слайдер */
 let slideIndex = 1;
 showSlides(slideIndex);
