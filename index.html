@@ -43,7 +43,7 @@
 						<div class="cta__title">
 							<span class="cta__subtitle">We work with you to empower your people to be happier, healthier and more productive in life and at work.</span>
 							<p>Дай слово своей истории</p>
-							<button class="cta__btn">join the waitlist</button>
+							<button class="cta__btn" onClick="openModal()";>join the waitlist</button>
 						</div>
 
 						<div class="cta__columns">
@@ -201,7 +201,7 @@
 						<div class="announcement__text">
 							Sound has the power to transport us — to distant lands and into deeper mental states. Join us this summer as we put our collective ear up to the world, journeying to remote Swedish villages and bustling Japanese cities, buzzing secret gardens and idyllic animal sanctuaries, rhythmic coastlines and iconic recording studios.
 						</div>
-						<button class="announcement__btn">join the waitlist</button>
+						<button class="announcement__btn" onClick="openModal()";>join the waitlist</button>
 
 						<div class="announcement__items">
 							
@@ -861,7 +861,7 @@
 								</div>
 								<sup>©</sup>
 							</div>
-							<button class="footer__btn">
+							<button class="footer__btn" onClick="openModal()";>
 								join the waitlist
 							</button>
 						</div>
@@ -938,9 +938,48 @@
 
 		</div>
 
+		<div id="modal" class="modal">
+			<div class="modal__window">
+				<div class="modal__title">
+					Get On The List
+				</div>
+				<div class="modal__subtitle">
+					Оставьте заявку, мы свяжимся с вами для интервью и подбора курса
+				</div>
+				<form action="php/send.php" method="post">
+					<div class="modal__row">
+						<div class="modal__item">
+							<div class="modal__name">Имя</div>
+							<input tabindex="1" name="name" id="name" type="text" placeholder="Введите ваше имя" required>
+						</div>
+						<div class="modal__item">
+							<div class="modal__name">Фамилия</div>
+							<input tabindex="2" name="last-name" id="last-name" type="text" placeholder="Введите вашу фамилию" required>
+						</div>
+					</div>
+					<div class="modal__row">
+						<div class="modal__item">
+							<div class="modal__name">Email</div>
+							<input tabindex="3" name="email" id="e-mail" type="text" placeholder="Введите вашу почту" required>
+						</div>
+						<div class="modal__item">
+							<div class="modal__name">Телефон</div>
+							<input tabindex="4" name="tel" id="tel" type="tel" placeholder="Введите ваш телефон" required>
+						</div>
+					</div>
+					<div class="modal__agreement">
+						Заполняя форму, Вы даете свое добровольное согласие Компании ООО "Клуб Ораторов" на обработку нижеследующих персональных данных с применением автоматизированных средств обработки или без таковых: фамилия, имя, адрес электронной почты, номер телефона.
+					</div>
+					<input value="Отправить" class="button" type="submit">
+				</form>
+			</div>
+		</div>
+
+
 		<!-- Scripts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="js/script.js"></script>
+		<script src="js/form.js"></script>
 
 		<script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js"></script>
 		<script>
@@ -993,17 +1032,19 @@
 			});
 
 			const announcement = new Swiper('.announcement__wrapper', {
-				wrapperClass: 'announcement__items',
-				slideClass: 'announcement__item',
-				// Optional parameters
-				mousewheel: {
+					wrapperClass: 'announcement__items',
+					slideClass: 'announcement__item',
+					// Optional parameters
+					mousewheel: {
 					eventsTarget: '.announcement__items',
-					releaseOnEdges: true
-				},
-				direction: 'horizontal',
-				slidesPerView: 3,
-				slidesPerGroup: 1
-			});
+					releaseOnEdges: true,
+					sensitivity: 3
+					},
+					direction: 'horizontal',
+					slidesOffsetAfter: 400,
+					slidesPerView: 3,
+					slidesPerGroup: 1
+				});
 		</script>
 
 

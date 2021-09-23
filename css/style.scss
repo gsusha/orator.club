@@ -1280,7 +1280,123 @@ body {
 }
 
 
+/* ---------- Модал ---------- */
 
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 100;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+
+	.modal__window{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		color: #000;
+
+		width: 820px;
+		padding: 44px;
+
+		background: #d8d8d8;
+		border-radius: 147px;
+		border: solid 1px #c2813b;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+
+		.modal__title {
+			font-size: 90px;
+			letter-spacing: -6px;
+			text-align: center;
+			margin: 0px 0px 20px 0px;
+		}
+		.modal__subtitle {
+			font-size: 22px;
+			line-height: 1.59;
+			text-align: center;
+			text-transform: uppercase;
+			width: 550px;
+
+			margin: 0px 0px 25px 0px;
+		}
+
+		.modal__row {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			margin: 0px 0px 20px 0px;
+
+			.modal__item {
+				width: 350px;
+				margin: 0px 30px 0px 0px;
+
+				.modal__name {
+					color: #c2813b;
+					font-size: 25px;
+					font-weight: 600;
+					margin: 0px 0px 10px
+				}
+			}
+			.modal__item:last-child {
+				margin: 0;
+			}
+		}
+		.modal__agreement {
+			margin: 20px 0px 40px 0px;
+			width: 700px;
+			font-size: 22px;
+			font-weight: 600;
+			line-height: 1.36;
+			text-align: center;
+		}
+	}
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+input[type=text],
+input[type=tel] {
+	border: solid 1px #979797;
+	background-color: #d8d8d8;
+	color: #868686;
+	padding: 22px;
+	width: 350px;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+input[type=submit] {
+	display: inline-block;
+	text-align: center;
+	background-color: #000;
+	color: #fff;
+	border-radius: 42px;
+	padding: 18px 53px 18px 53px;
+
+	font-size: 22px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+input[type=submit]:hover {
+	cursor: pointer;
+}
 
 //Подключение адаптива 
 @import "media.scss";
