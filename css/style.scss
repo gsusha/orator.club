@@ -544,7 +544,7 @@ body {
 			}
 
 			.announcement__item:hover {
-				transform: scale(1.02);
+				transform: scale(1.02); /* TODO: Возможно переделать на тень */
 			}
 		}
 	}
@@ -619,7 +619,7 @@ body {
 				.ambassadors__item-front {
 					display: none;
 				}
-				.ambassdors__item-back {
+				.ambassadors__item-back {
 					display: block;
 
 					.ambassodors__item-desc {
