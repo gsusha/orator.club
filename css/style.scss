@@ -52,7 +52,7 @@ body {
 .header {
 	width: 100%;
 	background: #b6c1c1;
-	padding: 10px 0;
+	padding: 44px 0;
 	transition: 0.5s easy;
 	z-index: 10;
 
@@ -84,7 +84,7 @@ body {
 			padding: 10px 58px 10px 58px;
 
 			.header__link {
-				margin: 0px 21px 0px 0px;
+				margin: 0px 10.5px;
 			}
 			.header__link a {
 				color: #000;
@@ -297,7 +297,7 @@ body {
 		width: 1665px; /* TODO: Костыль для слайдера, найти нормальное решение и переделать */
 
 		.family__top {
-			width: 1440px; /* TODO: См. выше */
+			width: 1340px; /* TODO: См. выше */
 			display: flex;
 			align-items: flex-end;
 			justify-content: space-between;
@@ -422,10 +422,12 @@ body {
 
 		.announcement__items {
 			display: flex;
+    		align-self: flex-start;
 
 			.announcement__item {
+				position: relative;
 				width: 374px;
-				height: 100%;
+				transition: all 0.3s ease;
 
 				background: #dde7f0;
 				border-radius: 18px;
@@ -541,9 +543,8 @@ body {
 				background: #f0dedd;
 			}
 
-
 			.announcement__item:hover {
-				background: #f7b03c;
+				transform: scale(1.02);
 			}
 		}
 	}
