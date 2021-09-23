@@ -318,7 +318,10 @@ body {
 	background: #d8d8d8;
 	padding: 70px 0;
 	.family__wrapper {
+		width: 1665px; /* TODO: Костыль для слайдера, найти нормальное решение и переделать */
+
 		.family__top {
+			width: 1440px; /* TODO: См. выше */
 			display: flex;
 			align-items: flex-end;
 			justify-content: space-between;

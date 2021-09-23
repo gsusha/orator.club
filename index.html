@@ -952,9 +952,9 @@
 				slideClass: 'family__item',
 				// Optional parameters
 				direction: 'horizontal',
-				slidesPerView: 2
+				slidesPerView: 3,
+				loop: true
 			});
-			//family.mousewheel.enable();
 
 			const space = new Swiper('.space__slider', {
 				navigation: {
@@ -977,6 +977,19 @@
 				// Optional parameters
 				direction: 'horizontal',
 				slidesPerView: 1
+			});
+
+			const announcement = new Swiper('.announcement__wrapper', {
+				wrapperClass: 'announcement__items',
+				slideClass: 'announcement__item',
+				// Optional parameters
+				mousewheel: {
+					eventsTarget: '.announcement__items',
+					releaseOnEdges: true
+				},
+				direction: 'horizontal',
+				slidesPerView: 3,
+				slidesPerGroup: 1
 			});
 		</script>
 
