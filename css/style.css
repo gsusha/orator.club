@@ -676,6 +676,7 @@ html, body {
 .announcement .announcement__wrapper .announcement__items .announcement__item:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
+  /* TODO: Возможно переделать на тень */
 }
 
 /* ---------- AMBASSADORS ---------- */
@@ -741,10 +742,10 @@ html, body {
 .ambassadors .ambassadors__wrapper .ambassadors__grid .ambassadors__item:hover .ambassadors__item-front {
   display: none;
 }
-.ambassadors .ambassadors__wrapper .ambassadors__grid .ambassadors__item:hover .ambassdors__item-back {
+.ambassadors .ambassadors__wrapper .ambassadors__grid .ambassadors__item:hover .ambassadors__item-back {
   display: block;
 }
-.ambassadors .ambassadors__wrapper .ambassadors__grid .ambassadors__item:hover .ambassdors__item-back .ambassodors__item-desc {
+.ambassadors .ambassadors__wrapper .ambassadors__grid .ambassadors__item:hover .ambassadors__item-back .ambassodors__item-desc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
