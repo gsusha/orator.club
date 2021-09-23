@@ -71,7 +71,7 @@
 			<div class="separator">
 				<div class="container">
 					<div class="separator__wrapper">
-						<span>бунтари — романтики — философы — креаторы — поэты — идеалисты — лидеры — ораторы.</span>
+						<span>бунтари — романтики — философы — креаторы — поэты — идеалисты — лидеры — ораторы —</span>
 					</div>
 				</div>
 			</div>
@@ -627,7 +627,7 @@
 			<div class="separator">
 				<div class="container">
 					<div class="separator__wrapper">
-						<span>бунтари — романтики — философы — креаторы — поэты — идеалисты — лидеры — ораторы.</span>
+						<span>бунтари — романтики — философы — креаторы — поэты — идеалисты — лидеры — ораторы — </span>
 					</div>
 				</div>
 			</div>
@@ -931,7 +931,7 @@
 			<div class="separator">
 				<div class="container">
 					<div class="separator__wrapper">
-						<span>бунтари — романтики — философы — креаторы — поэты — идеалисты — лидеры — ораторы.</span>
+						<span>бунтари — романтики — философы — креаторы — поэты — идеалисты — лидеры — ораторы — </span>
 					</div>
 				</div>
 			</div>
@@ -941,6 +941,19 @@
 		<!-- Scripts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="js/script.js"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js"></script>
+		<script>
+			$(function() {
+				$('.separator__wrapper span').marquee({
+					delayBeforeStart: 0,
+					speed: 200,
+					gap: 10.5,
+					startVisible: true,
+					duplicated: true
+				});
+			});
+		</script>
 
 		<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 		<script type="text/javascript">
