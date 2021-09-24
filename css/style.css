@@ -75,44 +75,62 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 /* ExtraBold */
 @font-face {
-  font-family: "TTBarrels";
-  src: local("TTBarrels"), url("../fonts/TTBarrels-ExtraBold.woff") format("woff");
+  font-family: TTBarrels;
+  src: url("../fonts/TT Barrels ExtraBold.otf");
   font-weight: 800;
   font-style: normal;
 }
+/* ExtraBold italic */
+@font-face {
+  font-family: TTBarrels;
+  font-weight: 800;
+  font-style: italic;
+  src: url("../fonts/TT Barrels ExtraBold Italic.otf");
+}
+/* Bold */
+@font-face {
+  font-family: TTBarrels;
+  src: url("../fonts/TT Barrels Bold.otf");
+  font-weight: 700;
+}
 /* DemiBold */
 @font-face {
-  font-family: "TTBarrels";
-  src: local("TTBarrels"), url("../fonts/TTBarrels-DemiBold.woff") format("woff");
+  font-family: TTBarrels;
+  src: url("../fonts/TT Barrels DemiBold.otf");
   font-weight: 600;
+}
+/* DemiBold Italic */
+@font-face {
+  font-family: TTBarrels;
+  font-style: italic;
+  font-weight: 600;
+  src: url("../fonts/TT Barrels DemiBold Italic.otf");
+}
+/* Regular */
+@font-face {
+  font-family: TTBarrels;
+  src: url("../fonts/TT Barrels Regular.otf");
+  font-weight: normal;
+}
+/* Italic */
+@font-face {
+  font-family: TTBarrels;
+  src: url("../fonts/TT Barrels Italic.otf");
+  font-weight: 100;
+  font-style: italic;
+}
+/* Light */
+@font-face {
+  font-family: TTBarrels;
+  src: url("../fonts/TT Barrels Light.otf");
+  font-weight: 100;
   font-style: normal;
 }
 /* Light */
 @font-face {
-  font-family: "TTBarrels";
-  src: local("TTBarrels"), url("../fonts/TTBarrels-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-/* Bold */
-@font-face {
-  font-family: "TTBarrels";
-  src: local("TTBarrels"), url("../fonts/TTBarrels-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-/* Regular */
-@font-face {
-  font-family: "TTBarrels";
-  src: local("TTBarrels"), url("../fonts/TTBarrels-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-/* Italic */
-@font-face {
-  font-family: "TTBarrels";
-  src: local("TTBarrels"), url("../fonts/TTBarrels-Italic.woff") format("woff");
-  font-weight: normal;
+  font-family: TTBarrels;
+  src: url("../fonts/TT Barrels Light Italic.otf");
+  font-weight: 100;
   font-style: italic;
 }
 html, body {
@@ -123,7 +141,7 @@ html, body {
   min-width: 1440px;
   margin: auto;
   overflow-x: hidden;
-  font-family: "TTBarrels";
+  font-family: TTBarrels, "Times New Roman", sans-serif;
   font-weight: 400;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,7 +159,7 @@ html, body {
 .container {
   width: 1440px;
   margin: auto;
-  padding: 0px 50px;
+  padding: 0 50px;
 }
 
 .important {
@@ -191,6 +209,9 @@ html, body {
   font-weight: 600;
   text-transform: uppercase;
 }
+.header .header__wrapper .header__item {
+  padding-top: 5px;
+}
 .header .header__wrapper .header__item a {
   color: #000;
 }
@@ -210,14 +231,15 @@ html, body {
   padding: 10px 58px 10px 58px;
 }
 .header .header__wrapper .header__menu .header__link {
-  margin: 0px 10.5px;
+  margin: 5px 10.5px 0;
+  white-space: nowrap;
 }
 .header .header__wrapper .header__menu .header__link a {
   color: #000;
 }
 .header .header__wrapper .header__menu .header__logo {
   width: 380px;
-  margin: 0px 34px;
+  margin: 0 34px;
 }
 .header .header__wrapper .header__menu .header__logo img {
   width: 100%;
@@ -230,6 +252,10 @@ html, body {
           transform: translate(-50%, 0);
 }
 
+.header__mobile {
+  display: none;
+}
+
 /* ---------- CTA ---------- */
 .cta {
   width: 100%;
@@ -238,11 +264,11 @@ html, body {
 .cta .cta__wrapper .cta__title {
   position: relative;
   font-weight: 300;
-  margin: 0px 0px 30px 0px;
+  margin: 0 0 30px 0;
 }
 .cta .cta__wrapper .cta__title .cta__subtitle {
   float: right;
-  width: 306px;
+  width: 350px;
   line-height: 1.4;
   font-size: 25px;
   font-weight: 600;
@@ -251,6 +277,7 @@ html, body {
   position: absolute;
   bottom: 115px;
   right: 0;
+  padding-top: 5px;
   width: 300px;
   height: 70px;
   background: #fabc44;
@@ -266,12 +293,15 @@ html, body {
   letter-spacing: -18px;
   font-size: 180px;
 }
+.cta .cta__wrapper .cta__title-mobile {
+  display: none;
+}
 .cta .cta__wrapper .cta__columns {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  margin: 0px 0px 50px 0px;
+  margin: 0 0 50px 0;
 }
 .cta .cta__wrapper .cta__columns .cta__column {
   width: 640px;
@@ -279,7 +309,7 @@ html, body {
 .cta .cta__wrapper .cta__columns .cta__column .cta__img {
   width: 640px;
   height: 470px;
-  margin: 0px 0px 22px 0px;
+  margin: 0 0 22px 0;
 }
 .cta .cta__wrapper .cta__columns .cta__column .cta__img img {
   border-radius: 8px;
@@ -292,7 +322,7 @@ html, body {
 .cta .cta__wrapper .cta__columns .cta__column .cta__number {
   text-transform: uppercase;
   font-size: 25px;
-  margin: 0px 0px 14px 0px;
+  margin: 0 0 14px 0;
 }
 .cta .cta__wrapper .cta__columns .cta__column .cta__name {
   font-size: 90px;
@@ -308,7 +338,7 @@ html, body {
   background: #c2813b;
   white-space: nowrap;
   overflow: hidden;
-  padding: 36px 0px;
+  padding: 36px 0;
 }
 .separator .separator__wrapper span {
   font-size: 50px;
@@ -333,7 +363,7 @@ html, body {
   background: #fff;
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
-  margin: 0px -50px;
+  margin: 0 -50px;
 }
 .grid .grid__wrapper .grid__big {
   background: #000;
@@ -353,19 +383,19 @@ html, body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 500px;
-  padding: 70px 0px;
+  padding: 70px 0;
 }
 .grid .grid__wrapper .grid__big .grid__title {
   text-transform: uppercase;
   color: #c2813b;
   font-size: 25px;
-  padding: 0px 50px;
-  margin: 0px 0px 25px 0px;
+  padding: 0 50px;
+  margin: 0 0 25px 0;
 }
 .grid .grid__wrapper .grid__big .grid__text {
   color: #fff;
   font-size: 25px;
-  padding: 0px 50px;
+  padding: 0 50px;
 }
 .grid .grid__wrapper .grid__item {
   display: -webkit-box;
@@ -399,8 +429,8 @@ html, body {
   height: 2px;
   background: #fff;
   position: absolute;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
 }
 
 /* ---------- FAMILY ---------- */
@@ -425,7 +455,7 @@ html, body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0px 0px 40px 0px;
+  margin: 0 0 40px 0;
 }
 .family .family__wrapper .family__top .family__title {
   font-size: 90px;
@@ -448,7 +478,7 @@ html, body {
 }
 .family .family__wrapper .family__top .family__scroll img {
   width: 80px;
-  margin: 0px 0px 0px 40px;
+  margin: 0 0 0 40px;
   cursor: pointer;
 }
 .family .family__wrapper .family__row {
@@ -457,13 +487,13 @@ html, body {
   display: flex;
 }
 .family .family__wrapper .family__row .family__item {
-  margin: 0px 10px 0px 0px;
+  margin: 0 10px 0 0;
 }
 .family .family__wrapper .family__row .family__item .family__img {
   width: 550px;
   height: 765px;
   background: #121212;
-  margin: 0px 0px 20px 0px;
+  margin: 0 0 20px 0;
 }
 .family .family__wrapper .family__row .family__item .family__img img {
   width: 100%;
@@ -506,7 +536,7 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0px 0px 40px 0px;
+  margin: 0 0 40px 0;
 }
 .announcement .announcement__wrapper .announcement__title .announcement__part-title {
   font-size: 120px;
@@ -532,19 +562,20 @@ html, body {
   font-style: italic;
   letter-spacing: -5.45px;
   text-align: center;
-  margin: 0px 0px 40px 0px;
+  margin: 0 0 40px 0;
 }
 .announcement .announcement__wrapper .announcement__btn {
   border-radius: 42px;
   background: #000;
   width: 374px;
   height: 70px;
+  padding-top: 5px;
   font-size: 22px;
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
   letter-spacing: 2px;
-  margin: 0px 0px 56px 0px;
+  margin: 0 0 56px 0;
 }
 .announcement .announcement__wrapper .announcement__items {
   display: -webkit-box;
@@ -577,7 +608,7 @@ html, body {
           justify-content: center;
   -ms-flex-preferred-size: auto;
       flex-basis: auto;
-  margin: 0px 20px;
+  margin: 0 20px;
   padding: 30px;
 }
 .announcement .announcement__wrapper .announcement__items .announcement__item .announcement__item-wrapper {
@@ -604,7 +635,8 @@ html, body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  margin: 0px 0px 30px 0px;
+  margin: 0 0 30px 0;
+  white-space: nowrap;
 }
 .announcement .announcement__wrapper .announcement__items .announcement__item .announcement__item-wrapper .announcement__item-top .announcement__item-tags .announcement__item-tag {
   border-radius: 17px;
@@ -614,7 +646,13 @@ html, body {
   font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
-  padding: 12px 20px 8px 20px;
+  padding: 0 20px 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .announcement .announcement__wrapper .announcement__items .announcement__item .announcement__item-wrapper .announcement__item-top .announcement__item-tags .announcement__item-open {
   border-radius: 17px;
@@ -632,13 +670,13 @@ html, body {
   font-style: italic;
   font-size: 60px;
   letter-spacing: -4px;
-  margin: 0px 0px 20px 0px;
+  margin: 0 0 20px 0;
 }
 .announcement .announcement__wrapper .announcement__items .announcement__item .announcement__item-wrapper .announcement__item-top .announcement__item-desc {
   font-size: 25px;
   line-height: 1.2;
   letter-spacing: -0.23px;
-  margin: 0px 0px 70px 0px;
+  margin: 0 0 70px 0;
 }
 .announcement .announcement__wrapper .announcement__items .announcement__item .announcement__item-wrapper .announcement__item-bottom {
   display: -webkit-box;
@@ -691,7 +729,7 @@ html, body {
   -ms-grid-columns: 1fr 25px 1fr 25px 1fr 25px 1fr 25px 1fr;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 25px;
-  margin: 0px 0px 100px 0px;
+  margin: 0 0 100px 0;
   -webkit-perspective: 2500;
 }
 .ambassadors .ambassadors__wrapper .ambassadors__grid .ambassadors__item {
@@ -721,7 +759,7 @@ html, body {
 .ambassadors .ambassadors__wrapper .ambassadors__grid .ambassadors__item .ambassadors__item-front .ambassadors__item-img {
   width: 216px;
   height: 256px;
-  margin: 0px 0px 20px 0px;
+  margin: 0 0 20px 0;
 }
 .ambassadors .ambassadors__wrapper .ambassadors__grid .ambassadors__item .ambassadors__item-front .ambassadors__item-img img {
   width: 100%;
@@ -768,7 +806,7 @@ html, body {
 .ambassadors .ambassadors__wrapper .ambassadors__text .ambassadors__title {
   font-size: 120px;
   letter-spacing: -8px;
-  margin: 0px 80px 0px 0px;
+  margin: 0 80px 0 0;
   text-transform: uppercase;
 }
 .ambassadors .ambassadors__wrapper .ambassadors__text .ambassadors__subtitle {
@@ -781,7 +819,7 @@ html, body {
 /* ---------- VIDEO ---------- */
 .video {
   width: 100%;
-  padding: 0px -50px;
+  padding: 0 -50px;
 }
 .video .video__wrapper {
   position: relative;
@@ -823,7 +861,7 @@ html, body {
 .educators {
   width: 100%;
   background: #373131;
-  padding: 70px 0px;
+  padding: 70px 0;
 }
 .educators .educators__wrapper .educators__top {
   display: -webkit-box;
@@ -836,7 +874,7 @@ html, body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0px 0px 40px 0px;
+  margin: 0 0 40px 0;
 }
 .educators .educators__wrapper .educators__top .educators__title {
   color: #c2813b;
@@ -846,6 +884,7 @@ html, body {
 .educators .educators__wrapper .educators__top .educators__btn {
   width: 320px;
   height: 70px;
+  padding-top: 5px;
   background: #c2813b;
   border-radius: 42px;
   border: solid 1px #000;
@@ -866,12 +905,13 @@ html, body {
   width: 320px;
   height: 420px;
   position: relative;
-  margin: 0px 0px 30px 0px;
+  margin: 0 0 30px 0;
 }
 .educators .educators__wrapper .educators__grid .educators__item .educators__block .educators__position {
   position: absolute;
   bottom: 26px;
   left: 22px;
+  padding-top: 5px;
   width: 273px;
   height: 49px;
   border: solid 1px #000;
@@ -945,18 +985,18 @@ html, body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 70px 0px;
+  padding: 70px 0;
 }
 .second-grid .second-grid__wrapper .second-grid__big .second-grid__title {
   color: #c2813b;
   font-size: 25px;
-  padding: 0px 50px;
-  margin: 0px 0px 25px 0px;
+  padding: 0 50px;
+  margin: 0 0 25px 0;
 }
 .second-grid .second-grid__wrapper .second-grid__big .second-grid__text {
   color: #fff;
   font-size: 25px;
-  padding: 0px 50px;
+  padding: 0 50px;
 }
 .second-grid .second-grid__wrapper .second-grid__item {
   display: -webkit-box;
@@ -998,7 +1038,7 @@ html, body {
 .second-grid .second-grid__wrapper .second-grid__item .second-grid__item-img {
   width: 340px;
   height: 230px;
-  margin: 0px 0px 20px 0px;
+  margin: 0 0 20px 0;
 }
 .second-grid .second-grid__wrapper .second-grid__item .second-grid__item-img img {
   width: 100%;
@@ -1018,7 +1058,7 @@ html, body {
           justify-content: space-between;
   font-size: 25px;
   letter-spacing: -1px;
-  margin: 0px 0px 20px 0px;
+  margin: 0 0 20px 0;
 }
 .second-grid .second-grid__wrapper .second-grid__item .second-grid__item-row .second-grid__item-date {
   text-transform: uppercase;
@@ -1070,7 +1110,7 @@ html, body {
   font-style: italic;
   letter-spacing: -5.45px;
   text-align: center;
-  margin: 0px 0px 100px 0px;
+  margin: 0 0 100px 0;
 }
 .speakers .speakers__wrapper .speakers__grid {
   display: -ms-grid;
@@ -1106,7 +1146,7 @@ html, body {
           align-items: center;
 }
 .space .space__wrapper .space__slider {
-  margin: 0px 0px 100px 0px;
+  margin: 0 0 100px 0;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -1130,7 +1170,7 @@ html, body {
   position: absolute;
   bottom: 30px;
   margin-top: -22px;
-  padding: 0px 40px;
+  padding: 0 40px;
   -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
 }
@@ -1182,7 +1222,7 @@ html, body {
   letter-spacing: -5.45px;
   text-align: center;
   width: 1044px;
-  margin: 0px 0px 50px 0px;
+  margin: 0 0 50px 0;
 }
 .space .space__wrapper .space__number {
   text-transform: uppercase;
@@ -1223,32 +1263,35 @@ html, body {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px 60px;
-  margin: 0px 25px 0px 0px;
+  margin: 0 25px 0 0;
 }
 .form .form__wrapper .form__form .form__title {
   font-size: 90px;
   letter-spacing: -6px;
-  margin: 0px 0px 30px 0px;
+  margin: 0 0 30px 0;
 }
 .form .form__wrapper .form__form .form__subtitle {
   font-size: 25px;
   font-weight: 600;
   line-height: 1.4;
-  margin: 0px 0px 30px 0px;
+  margin: 0 0 30px 0;
 }
 .form .form__wrapper .form__form .form__input {
   background: #d8d8d8;
   font-size: 45px;
   letter-spacing: -3px;
   color: #000;
+  border: unset;
   border-bottom: 2px solid #000;
-  padding: 10px 0px;
-  margin: 0px 0px 30px 0px;
+  width: 100%;
+  padding: 10px 0;
+  margin: 0 0 30px 0;
 }
 .form .form__wrapper .form__form .form__btn {
   text-transform: uppercase;
   width: 300px;
   height: 70px;
+  padding-top: 5px;
   border-radius: 42px;
   background: #000;
   font-size: 22px;
@@ -1292,7 +1335,7 @@ html, body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0px 0px 100px 0px;
+  margin: 0 0 100px 0;
 }
 .footer .footer__wrapper .footer__top .footer__title {
   display: -webkit-box;
@@ -1314,6 +1357,7 @@ html, body {
 .footer .footer__wrapper .footer__top .footer__btn {
   width: 312px;
   height: 70px;
+  padding-top: 5px;
   background: #fff;
   border-radius: 42px;
   text-transform: uppercase;
@@ -1327,7 +1371,7 @@ html, body {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 0px 0px 50px 0px;
+  margin: 0 0 50px 0;
 }
 .footer .footer__wrapper .footer__menu .footer__menu-item {
   display: -webkit-box;
@@ -1343,7 +1387,7 @@ html, body {
   font-size: 50px;
   letter-spacing: -3px;
   text-transform: uppercase;
-  margin: 0px 0px 20px 0px;
+  margin: 0 0 20px 0;
 }
 .footer .footer__wrapper .footer__info {
   display: -ms-grid;
@@ -1382,7 +1426,7 @@ html, body {
   font-weight: 300;
   font-style: italic;
   letter-spacing: -21.6px;
-  margin: 0px -200px;
+  margin: 0 -200px;
 }
 .power .power__wrapper .power__row {
   width: 100%;
@@ -1396,7 +1440,7 @@ html, body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0px 0px 40px 0px;
+  margin: 0 0 40px 0;
 }
 .power .power__wrapper .power__row .power__item {
   font-size: 25px;
@@ -1413,6 +1457,7 @@ html, body {
   top: 0;
   width: 100%;
   height: 100%;
+  font-family: TTBarrels;
   background: rgba(0, 0, 0, 0.8);
 }
 .modal .modal__window {
@@ -1445,7 +1490,7 @@ html, body {
   font-size: 90px;
   letter-spacing: -6px;
   text-align: center;
-  margin: 0px 0px 20px 0px;
+  margin: 0 0 20px 0;
 }
 .modal .modal__window .modal__subtitle {
   font-size: 22px;
@@ -1453,7 +1498,7 @@ html, body {
   text-align: center;
   text-transform: uppercase;
   width: 550px;
-  margin: 0px 0px 25px 0px;
+  margin: 0 0 25px 0;
 }
 .modal .modal__window .modal__row {
   width: 100%;
@@ -1466,23 +1511,23 @@ html, body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0px 0px 20px 0px;
+  margin: 0 0 20px 0;
 }
 .modal .modal__window .modal__row .modal__item {
   width: 350px;
-  margin: 0px 30px 0px 0px;
+  margin: 0 30px 0 0;
 }
 .modal .modal__window .modal__row .modal__item .modal__name {
   color: #c2813b;
   font-size: 25px;
   font-weight: 600;
-  margin: 0px 0px 10px;
+  margin: 0 0 10px;
 }
 .modal .modal__window .modal__row .modal__item:last-child {
   margin: 0;
 }
 .modal .modal__window .modal__agreement {
-  margin: 20px 0px 40px 0px;
+  margin: 20px 0 40px 0;
   width: 700px;
   font-size: 22px;
   font-weight: 600;
@@ -1514,7 +1559,7 @@ input[type=tel] {
   font-weight: 600;
 }
 
-input[type=submit] {
+input[type=button] {
   display: inline-block;
   text-align: center;
   background-color: #000;
@@ -1530,4 +1575,187 @@ input[type=submit] {
 
 input[type=submit]:hover {
   cursor: pointer;
+}
+
+@media (max-width: 420px) {
+  .wrapper {
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+  }
+
+  .container {
+    max-width: 420px;
+    padding: 0px 25px;
+    margin: 0;
+  }
+
+  .important .important__wrapper {
+    height: 35px;
+  }
+  .important .important__wrapper .important__title {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.64px;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .header__mobile {
+    display: block;
+    width: 100%;
+    padding: 23px 0;
+    background: #b6c1c1;
+  }
+  .header__mobile .header__mobile-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .header__mobile .header__mobile-wrapper .header__logo {
+    border-radius: 36.5px;
+    border: solid 1px #000;
+    background: #fff;
+    padding: 14px 33px 20px 26px;
+    margin: 0px 14px 0px 0px;
+  }
+  .header__mobile .header__mobile-wrapper .header__logo img {
+    width: 200px;
+    height: 30px;
+  }
+  .header__mobile .header__mobile-wrapper .header__btns {
+    position: relative;
+  }
+  .header__mobile .header__mobile-wrapper .header__btns .header__year {
+    width: 101px;
+    height: 39px;
+    border-radius: 36.5px;
+    border: solid 1px #000;
+    background: #fff;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.07px;
+    color: #000;
+    text-transform: uppercase;
+  }
+  .header__mobile .header__mobile-wrapper .header__btns .header__menu {
+    width: 101px;
+    height: 39px;
+    border-radius: 36.5px;
+    border: solid 1px #000;
+    background: #fff;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header__mobile .header__mobile-wrapper .header__btns .header__menu a {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.07px;
+    color: #000;
+    text-transform: uppercase;
+  }
+  .header__mobile .header__mobile-wrapper.fixed {
+    position: fixed;
+    top: 3%;
+    left: 50%;
+    -webkit-transform: translate(-44%, 0);
+            transform: translate(-44%, 0);
+  }
+
+  .cta .cta__wrapper .cta__title {
+    display: none;
+  }
+  .cta .cta__wrapper .cta__title-mobile {
+    display: block;
+    margin: 0px 0px 40px 0px;
+  }
+  .cta .cta__wrapper .cta__title-mobile .cta__subtitle {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.36;
+    letter-spacing: -0.5px;
+    float: none;
+  }
+  .cta .cta__wrapper .cta__title-mobile .cta__btn {
+    float: right;
+    width: 179px;
+    height: 54px;
+    background: #fabc44;
+    border-radius: 42px;
+    border: solid 1px #979797;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 3.75;
+    letter-spacing: 1.07px;
+    text-transform: uppercase;
+  }
+  .cta .cta__wrapper .cta__title-mobile p {
+    font-size: 70px;
+    line-height: 1.09;
+    letter-spacing: -5.83px;
+    text-transform: uppercase;
+    margin: 0px 0px 40px 0px;
+  }
+  .cta .cta__wrapper .cta__columns .cta__column {
+    width: 180px;
+  }
+  .cta .cta__wrapper .cta__columns .cta__column .cta__img {
+    width: 180px;
+    height: 280px;
+  }
+  .cta .cta__wrapper .cta__columns .cta__column .cta__number {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin: 0px 0px 10px 0px;
+  }
+  .cta .cta__wrapper .cta__columns .cta__column .cta__name {
+    font-size: 35px;
+    letter-spacing: -2px;
+    margin: 0px 0px 10px 0px;
+  }
+  .cta .cta__wrapper .cta__columns .cta__column .cta__desc {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.43;
+    letter-spacing: 0.5px;
+  }
+
+  .separator {
+    padding: 30px 0;
+  }
+  .separator .separator__wrapper span {
+    font-size: 30px;
+    letter-spacing: -1.8px;
+  }
 }
