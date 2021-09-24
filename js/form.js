@@ -9,6 +9,11 @@ function openModal() {
   document.body.style.overflow = "hidden";
 }
 
+function closeModal() {
+  modal.style.display = "none";
+  document.body.style.overflow = "unset";
+}
+
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
