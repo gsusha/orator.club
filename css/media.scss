@@ -1,11 +1,11 @@
-@media (max-width: 420px) {
+@media (max-width: 426px) {
 	.wrapper {
 		min-width: 100%;
 		min-height: 100%;
 		margin: 0;
 	}
 	.container {
-		max-width: 420px;
+		max-width: 426px;
 		padding: 0px 25px;
 		margin: 0;
 	}
@@ -36,6 +36,8 @@
 			display: flex;
 			align-items: center;
 			width: 100%;
+
+			z-index: 3;
 
 			.header__logo {
 				border-radius: 36.5px;
@@ -200,6 +202,10 @@
 		}
 	}
 
-
+	.grid {
+		.grid__wrapper {
+			grid-auto-flow: column;
+		}
+	}
 //Конец медия	
 }
