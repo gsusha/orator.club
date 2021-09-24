@@ -27,7 +27,7 @@ $(window).on("resize", function() {
 });
 
 function resize() {			// Функция изменения вьюпорта
-	let breakpoint = 420	// Брейкпоинт по ширине
+	let breakpoint = 426	// Брейкпоинт по ширине
 	viewport = document.querySelector("meta[name=viewport]");
 
 	if((window.outerWidth) <= breakpoint) {

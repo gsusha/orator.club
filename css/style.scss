@@ -627,8 +627,6 @@ body {
 
       margin: 0 0 100px 0;
 
-      -webkit-perspective: abs(2500);
-
       .ambassadors__item {
         width: 240px;
         height: 350px;
@@ -666,6 +664,7 @@ body {
 
           .ambassadors__item-name {
             text-transform: uppercase;
+            font-size: 20px;
           }
         }
 
@@ -799,6 +798,9 @@ body {
         letter-spacing: 2px;
         font-size: 22px;
         font-weight: 600;
+      }
+      .educators__mobile-btn {
+        display: none;
       }
     }
 
