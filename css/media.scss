@@ -255,10 +255,12 @@
 
 	.family {
 		padding: 40px 0;
+
 		.family__wrapper {
+			width: 350px;		// TODO: Костыль для слайдера, найти нормальное решение и переделать
 
 			.family__top {
-				width: 370px;
+				width: 376px;  // TODO: См. выше
 
 				margin: 0px 0px 20px 0px;
 				.family__title {
@@ -276,6 +278,7 @@
 			.family__row {
 				.family__item {
 					margin: 0px 10px 0px 0px;
+
 					.family__img {
 						width: 340px;
 						height: 470px;
@@ -310,9 +313,10 @@
 					height: 110px;
 					margin: 0;
 					float: right;
-				}
-				.announcement__img img {
-					border-radius: 32px;
+
+					img {
+						border-radius: 32px;
+					}
 				}
 			}
 
@@ -332,6 +336,8 @@
 
 			.announcement__items {
 				.announcement__item {
+					width: 340px;
+					margin: 0 30px 0 0;
 
 					.announcement__item-wrapper {
 						.announcement__item-top {
@@ -616,6 +622,13 @@
 
 				.space__items {
 					height: 780px;
+
+			        .space__item {
+			          .space__img {
+			            height: 780px;
+			            width: auto;
+			          }
+			        }
 				}
 
 				.space__prev, .space__next {

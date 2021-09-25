@@ -247,7 +247,7 @@
 			  <div class="announcement__item-top">
 				<div class="announcement__item-tags">
 				  <a href="https://orator.club/" class="announcement__item-tag">start</a>
-				  <a href="https://orator.club/" class="announcement__item-open">набор открыт</a>
+				  <a href="https://orator.club/" class="announcement__item-open">Open</a>
 				</div>
 				<div class="announcement__item-title">
 				  Техника речи
@@ -272,7 +272,7 @@
 			  <div class="announcement__item-top">
 				<div class="announcement__item-tags">
 				  <a href="https://orator.club/" class="announcement__item-tag">#practice</a>
-				  <a href="https://orator.club/" class="announcement__item-open">набор открыт</a>
+				  <a href="https://orator.club/" class="announcement__item-open">Open</a>
 				</div>
 				<div class="announcement__item-title">
 				  Построение речи. Правила выступления.
@@ -299,7 +299,7 @@
 			  <div class="announcement__item-top">
 				<div class="announcement__item-tags">
 				  <a href="https://orator.club/" class="announcement__item-tag">#special</a>
-				  <a href="https://orator.club/" class="announcement__item-open">набор открыт</a>
+				  <a href="https://orator.club/" class="announcement__item-open">Open</a>
 				</div>
 				<div class="announcement__item-title">
 				  Внешний вид делового человека
@@ -326,7 +326,7 @@
 			  <div class="announcement__item-top">
 				<div class="announcement__item-tags">
 				  <a href="https://orator.club/" class="announcement__item-tag">TAG</a>
-				  <a href="https://orator.club/" class="announcement__item-open">OPEN</a>
+				  <a href="https://orator.club/" class="announcement__item-open">Open</a>
 				</div>
 				<div class="announcement__item-title">
 				  Тайтл курса
@@ -351,7 +351,7 @@
 			  <div class="announcement__item-top">
 				<div class="announcement__item-tags">
 				  <a href="#" class="announcement__item-tag">TAG</a>
-				  <a href="#" class="announcement__item-open">OPEN</a>
+				  <a href="#" class="announcement__item-open">Open</a>
 				</div>
 				<div class="announcement__item-title">
 				  Тайтл курса
@@ -1042,54 +1042,71 @@
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script type="text/javascript">
 	const family = new Swiper('.family__wrapper', {
-		navigation: {
-			nextEl: '.family__scroll img',	// Немного костыль, но легальный
-		},
 		wrapperClass: 'family__row',
 		slideClass: 'family__item',
-		// Optional parameters
-		direction: 'horizontal',
-		slidesPerView: 3,
-		loop: true
+
+		navigation: {
+			nextEl: '.family__scroll img',		// Немного костыль, но легальный
+		},
+
+		breakpoints: {
+			427: { 														// Когда ширина >= 427px ©API
+				slidesPerView: 3,
+				width: null,
+				spaceBetween: 0,
+			},
+		},
+		
+		slidesPerView: 1,
+		width: 340,
+		spaceBetween: 10,
+		loop: true,
 	});
-	//family.mousewheel.enable();
+
+	const announcement = new Swiper('.announcement__wrapper', {
+		wrapperClass: 'announcement__items',
+		slideClass: 'announcement__item',
+
+		breakpoints: {
+			427: {
+				slidesPerView: 3,
+				slidesOffsetAfter: 200,
+				width: null,
+			},
+		},
+
+		mousewheel: {
+			eventsTarget: '.announcement__items',
+			releaseOnEdges: true,
+			sensitivity: 3,
+		},
+		
+		slidesPerView: 1,
+		width: 340,
+		spaceBetween: 30,
+	});
 
 	const space = new Swiper('.space__slider', {
+		wrapperClass: 'space__items',
+		slideClass: 'space__item',
+
 		navigation: {
 			nextEl: '.space__next',
-			prevEl: '.space__prev'
+			prevEl: '.space__prev',
 		},
 		pagination: {
 			el: '.space__nav',
 			type: 'bullets',
 			bulletClass: 'space__nav-item',
 			bulletActiveClass: 'active',
-			clickable: true
+			clickable: true,
 		},
 		autoplay: {
 			delay: 5000,
-			pauseOnMouseEnter: true
+			pauseOnMouseEnter: true,
 		},
-		wrapperClass: 'space__items',
-		slideClass: 'space__item',
-		// Optional parameters
-		direction: 'horizontal',
-		slidesPerView: 1
-	});
 
-	const announcement = new Swiper('.announcement__wrapper', {
-		wrapperClass: 'announcement__items',
-		slideClass: 'announcement__item',
-		// Optional parameters
-		mousewheel: {
-			eventsTarget: '.announcement__items',
-			releaseOnEdges: true,
-			sensitivity: 3
-		},
-		direction: 'horizontal',
-		slidesOffsetAfter: 400,
-		slidesPerView: 3,
-		slidesPerGroup: 1
+		slidesPerView: 1,
 	});
 </script>
 
