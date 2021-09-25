@@ -344,6 +344,7 @@
 							.announcement__item-tags {
 								.announcement__item-tag {
 									font-size: 18px;
+
 								}
 								.announcement__item-open {
 									font-size: 18px;
@@ -427,7 +428,7 @@
 			align-items: flex-end;
 
 			.video__video {
-				transform: scale(1);
+				transform: scale(4);
 			}
 
 			.video__title {
@@ -621,12 +622,12 @@
 				margin: 0 0 20px 0;
 
 				.space__items {
-					height: 780px;
 
 			        .space__item {
 			          .space__img {
-			            height: 780px;
-			            width: auto;
+			          	height: 780px;
+			          }
+			          .space__img img {
 			          }
 			        }
 				}
