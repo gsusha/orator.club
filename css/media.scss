@@ -587,11 +587,14 @@
 
 				margin: 0 0 70px 0;
 			}
+
 			.speakers__grid {
 				grid-template-columns: 1fr 1fr;
 				grid-gap: 5px;
+
 				.speakers__item {
 					font-size: 15px;
+					font-weight: 500;
 					line-height: 2;
 					letter-spacing: -0.8px;
 				}
@@ -633,6 +636,7 @@
 				width: 100%;
 				padding: 0 25px;
 				font-size: 45px;
+				font-weight: 600;
 				letter-spacing: -2px;
 				line-height: 1;
 				text-align: left;

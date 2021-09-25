@@ -2139,6 +2139,7 @@ input[type=submit]:hover {
   }
   .speakers .speakers__wrapper .speakers__grid .speakers__item {
     font-size: 15px;
+    font-weight: 500;
     line-height: 2;
     letter-spacing: -0.8px;
   }
@@ -2168,6 +2169,7 @@ input[type=submit]:hover {
     width: 100%;
     padding: 0 25px;
     font-size: 45px;
+    font-weight: 600;
     letter-spacing: -2px;
     line-height: 1;
     text-align: left;
