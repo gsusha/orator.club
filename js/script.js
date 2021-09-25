@@ -9,7 +9,7 @@ $(document).ready(function() {
 			$(".header__menu").removeClass("fixed");
 		}
 
-		if(wn > 35) {
+		if(wn > 50) {
 			$(".header__mobile-wrapper").addClass("fixed");
 		} else {
 			$(".header__mobile-wrapper").removeClass("fixed");
