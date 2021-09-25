@@ -189,9 +189,7 @@ html, body {
   width: 100%;
   background: #b6c1c1;
   padding: 44px 0;
-  -webkit-transition: 0.5s easy;
-  transition: 0.5s easy;
-  z-index: 10;
+  /*transition: 0.5s ease;*/
 }
 .header .header__wrapper {
   display: -webkit-box;
@@ -229,6 +227,7 @@ html, body {
   border: solid 1px #000;
   border-radius: 50px;
   padding: 10px 58px 10px 58px;
+  z-index: 10;
 }
 .header .header__wrapper .header__menu .header__link {
   margin: 5px 10.5px 0;

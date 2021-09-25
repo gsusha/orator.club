@@ -3,13 +3,13 @@ $(document).ready(function() {
 	$(window).on("scroll", function() {
 		let wn = $(window).scrollTop();
 
-		if(wn > 85) {
+		if(wn > 75) {
 			$(".header__menu").addClass("fixed");
 		} else {
 			$(".header__menu").removeClass("fixed");
 		}
 
-		if(wn > 50) {
+		if(wn > 40) {
 			$(".header__mobile-wrapper").addClass("fixed");
 		} else {
 			$(".header__mobile-wrapper").removeClass("fixed");
