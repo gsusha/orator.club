@@ -30,11 +30,11 @@ function resize() {			// Функция изменения вьюпорта
 	let breakpoint = 426	// Брейкпоинт по ширине
 	viewport = document.querySelector("meta[name=viewport]");
 
-	if((window.outerWidth) <= breakpoint) {
-		viewport.setAttribute("content", "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0");
+	if((window.innerWidth) <= breakpoint) {
+		// viewport.setAttribute("content", "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0");
 	}
 
-	if((window.outerWidth) > breakpoint) {
-		viewport.setAttribute("content", "width=device-width");
+	if((window.innerWidth) > breakpoint) {
+		viewport.setAttribute("content", `width=device-width`);
 	}
 }
